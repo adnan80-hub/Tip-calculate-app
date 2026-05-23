@@ -1,0 +1,27 @@
+let bill = document.querySelector(".bill-inp");
+let amount = document.querySelector(".num-amount span");
+let total = document.querySelector(".num-total span");
+
+let people = document.querySelector(".people")
+let select = document.querySelectorAll("ul li span");
+
+
+let numSele = "";
+
+select.forEach((ele, ind) => {
+    ele.addEventListener("click", function (e) {
+        numSele = parseInt(ele.textContent)
+        console.log(numSele)
+
+    })
+})
+
+
+let calc = "";
+
+people.oninput = function () {
+    calc = parseInt(bill.value * (numSele / 100));
+    amount.textContent = parseInt(calc / people.value).toFixed(2);
+    total.textContent = parseFloat((parseInt(bill.value) + calc) / people.value).toFixed(2)
+}
+

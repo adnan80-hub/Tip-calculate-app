@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Tip calculator app">
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+  <title>Frontend Mentor | Tip calculator app</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap"
+    rel="stylesheet">
+</head>
+
+<body>
+
+  <img class="img-fluid head-name" src="images/logo.svg" alt="">
+
+  <div class="bill-group ">
+    <div class="container d-flex gap-3 w-100">
+      <div class="page-left w-50 ">
+
+        <div class="name-bill mb-2">Bill</div>
+        <div class="input-bill w-100 d-flex mb-5 justify-content-between align-items-center py-2 px-3 ">
+          <input class="bill-inp" type="text" placeholder="0">
+          <img src="images/icon-dollar.svg" alt="">
+        </div>
+
+        <div class="name-select mb-3">Select Tip %</div>
+        <ul class="list-unstyled p-0 mb-5 d-flex flex-wrap gap-3">
+          <li><span>5</span>%</li>
+          <li><span>10</span>%</li>
+          <li><span>15</span>%</li>
+          <li><span>25</span>%</li>
+          <li><span>50</span>%</li>
+        </ul>
+
+        <div class="name-people mb-2">Number of People</div>
+
+        <div class="input-people w-100 d-flex mb-5 justify-content-between align-items-center py-2 px-3 ">
+          <input class="people" type="text" placeholder="0">
+          <img src="images/icon-person.svg" alt="">
+        </div>
+      </div>
+
+      <div class="page-right w-50 py-5 px-4">
+        <div class="tip-amount mb-4 d-flex justify-content-between align-items-center">
+          <p>Tip Amount <br><span>/ person</span></p>
+          <div class="num-amount">$<span>0.00</span></div>
+        </div>
+
+        <div class="tip-total d-flex justify-content-between align-items-center">
+          <p>Total <br><span>/ person</span></p>
+          <div class="num-total">$<span>0.00</span></div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- Bill
+
+  Select Tip %
+  5%
+  10%
+  15%
+  25%
+  50%
+  Custom
+
+  Number of People
+
+  Tip Amount
+  / person
+
+  Total
+  / person
+
+  Reset -->
+  <script src="main.js"></script>
+</body>
+
+</html>

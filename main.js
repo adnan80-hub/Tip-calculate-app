@@ -5,6 +5,7 @@ let total = document.querySelector(".num-total span");
 let people = document.querySelector(".people")
 let select = document.querySelectorAll("ul li span");
 
+let custom = document.querySelector(".custom");
 
 let numSele = "";
 
@@ -16,11 +17,15 @@ select.forEach((ele, ind) => {
     })
 })
 
-
 let calc = "";
 
 people.oninput = function () {
     calc = parseInt(bill.value * (numSele / 100));
+    amount.textContent = parseInt(calc / people.value).toFixed(2);
+    total.textContent = parseFloat((parseInt(bill.value) + calc) / people.value).toFixed(2)
+}
+custom.oninput = function () {
+    calc = parseInt(bill.value * (parseInt(custom.value) / 100));
     amount.textContent = parseInt(calc / people.value).toFixed(2);
     total.textContent = parseFloat((parseInt(bill.value) + calc) / people.value).toFixed(2)
 }

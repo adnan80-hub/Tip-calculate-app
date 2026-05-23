@@ -75,7 +75,8 @@ body {
     color: var(--Grey-500);
 }
 
-ul li {
+ul li,
+ul .put-custom {
     background-color: var(--Green-900);
     padding: 8px 20px;
     width: 120px;
@@ -87,6 +88,26 @@ ul li {
     text-align: center;
 }
 
+ul .put-custom {
+    padding: unset;
+}
+
+.custom {
+    width: 102%;
+    height: 102%;
+    border: none;
+    outline: none;
+    background-color: var(--Grey-50);
+    border-radius: 8px;
+    color: var(--Grey-400);
+    font-weight: 600;
+    padding-left: 15px;
+}
+
+.custom::placeholder {
+    font-weight: 700;
+    color: var(--Grey-400);
+}
 
 /* ======= page-right ========== */
 

@@ -19,15 +19,22 @@ body {
     font-family: "Space Mono", monospace !important;
     background-color: var(--Grey-200) !important;
     width: 100%;
-    height: 90vh;
+    height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
+
 }
 
 .head-name {
     margin-bottom: 5rem;
+}
+
+@media(max-width: 992px) {
+    .head-name {
+        margin-bottom: 30px;
+    }
 }
 
 .bill-group {
@@ -37,6 +44,27 @@ body {
     padding-top: 30px;
     background-color: var(--White);
     border-radius: 20px;
+}
+
+
+.page-left {
+    width: 50%;
+}
+
+@media (max-width:992px) {
+    .bill-group {
+        width: 371px;
+        padding-bottom: 18px;
+    }
+
+    .bill-group .container {
+        flex-direction: column;
+        /* width: 500px !important; */
+    }
+
+    .page-left {
+        width: 100%;
+    }
 }
 
 .bill-group .name-bill,
@@ -51,6 +79,23 @@ body {
     border-radius: 8px;
 }
 
+.input-bill {
+    margin-bottom: 3rem;
+}
+
+.input-people {
+    margin-bottom: 3rem;
+}
+
+@media(max-width: 992px) {
+    .input-people {
+        margin-bottom: 5px;
+    }
+
+    .input-bill {
+        margin-bottom: 5px;
+    }
+}
 
 .input-bill input,
 .input-people input {
@@ -75,6 +120,13 @@ body {
     color: var(--Grey-500);
 }
 
+
+@media(max-width: 992px) {
+    ul {
+        width: 336px;
+    }
+}
+
 ul li,
 ul .put-custom {
     background-color: var(--Green-900);
@@ -86,6 +138,14 @@ ul .put-custom {
     border-radius: 8px;
     cursor: pointer;
     text-align: center;
+}
+
+@media(max-width: 992px) {
+
+    ul li,
+    ul .put-custom {
+        width: 150px;
+    }
 }
 
 ul .put-custom {
@@ -115,12 +175,21 @@ ul .put-custom {
     background-color: var(--Green-900);
     height: 45vh;
     border-radius: 20px;
+    width: 50%;
 }
 
+
+@media (max-width: 992px) {
+    .page-right {
+        width: 100% !important;
+        height: 30vh;
+    }
+}
 
 .tip-amount p,
 .tip-total p {
     color: #fff;
+    font-weight: 600;
 }
 
 .tip-amount p span,
@@ -130,11 +199,31 @@ ul .put-custom {
     font-weight: 600;
 }
 
+
 .num-amount,
 .num-total {
     color: var(--green-400);
     font-size: 40px;
     font-weight: 600;
+}
+
+@media (max-width: 992px) {
+
+    .num-amount,
+    .num-total {
+        font-size: 35px;
+    }
+
+}
+
+.reset {
+    padding: 12px;
+    color: var(--Green-900);
+    background-color: var(--green-400);
+    text-align: center;
+    border-radius: 8px;
+    font-weight: 600;
+    cursor: pointer;
 }
 
 /* # Front-end Style Guide

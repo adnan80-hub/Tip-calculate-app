@@ -23,15 +23,25 @@ select.forEach((ele, ind) => {
 let calc = "";
 
 people.oninput = function () {
-    calc = parseInt(bill.value * (numSele / 100));
-    amount.textContent = parseInt(calc / people.value).toFixed(2);
-    total.textContent = parseFloat((parseInt(bill.value) + calc) / people.value).toFixed(2)
+    if (people.value === "") return false;
+    if (bill.value > 0) {
+        calc = parseFloat(+bill.value * (numSele / 100)).toFixed(2);
+        amount.textContent = parseFloat(calc / +people.value).toFixed(2);
+        total.textContent = parseFloat((+bill.value + +calc) / people.value).toFixed(2)
+    } else {
+        return false;
+    }
+
 }
 
 custom.oninput = function () {
-    calc = parseInt(bill.value * (parseInt(custom.value) / 100));
-    amount.textContent = parseInt(calc / people.value).toFixed(2);
-    total.textContent = parseFloat((parseInt(bill.value) + calc) / people.value).toFixed(2)
+    if (bill.value > 0) {
+        calc = parseFloat(+bill.value * (numSele / 100)).toFixed(2);
+        amount.textContent = parseFloat(calc / +people.value).toFixed(2);
+        total.textContent = parseFloat((+bill.value + +calc) / people.value).toFixed(2)
+    } else {
+        return false;
+    }
 }
 
 reset.onclick = function () {
@@ -40,4 +50,3 @@ reset.onclick = function () {
     amount.textContent = "0.00";
     total.textContent = "0.00";
 }
-

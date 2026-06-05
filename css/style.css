@@ -138,6 +138,12 @@ ul .put-custom {
     border-radius: 8px;
     cursor: pointer;
     text-align: center;
+    transition: 0.3s;
+}
+
+ul li:hover {
+    background-color: var(--Grey-200);
+    color: var(--Green-900);
 }
 
 @media(max-width: 992px) {
